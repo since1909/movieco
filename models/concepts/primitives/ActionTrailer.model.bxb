@@ -1,0 +1,4 @@
+enum (ActionTrailer) {
+  description (예고편 보여줘 )
+  symbol ("예고편")
+}

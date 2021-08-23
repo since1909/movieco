@@ -1,0 +1,5 @@
+train (t-3k510h4ynrol95cx29vr3obar) {
+  utterance ("[g:MovieDetail] (곡성)[v:Movie]  (예고편)[v:ActionTrailer:예고편] 보여줘")
+  plan (Y2BhkMgtS87Xy80vy0wF0r4g2iW1JDEzh0EWRSY4I78cLBtSBJRMLWKQQpF2TC7JzM+DyQlhGsrAzMDIwAQkGYA0CEIAiA8WBQA=)
+  last-modified (1579513955869)
+}

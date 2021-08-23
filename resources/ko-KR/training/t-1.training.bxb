@@ -1,0 +1,5 @@
+train (t-1wt41z37owtsbkyp49q8r6cc5) {
+  utterance ("[g:MovieDetail] (해치지않아)[v:Movie] (어때)[v:Action:어때]")
+  plan (Y2BhkMgtS87Xy80vy0wF0r4g2iW1JDEzh0EKRSY4I78cLOuZl5bPIIwi55hckpmfxyCEaRQDMwMjAxOQZADSIAgBID5YFAA=)
+  last-modified (1579513246702)
+}

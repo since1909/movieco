@@ -1,0 +1,7 @@
+structure (Stars) {
+  description (__DESCRIPTION__)
+  property (movie) {
+    type (Movie)
+    min (Optional) max (One)
+  }
+}

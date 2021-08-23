@@ -1,0 +1,62 @@
+result-view {
+  match: Location (location) {
+    // from-output: ShowRideShareMap
+  }
+
+  message {
+    template ("Here is a map of your ride:")
+  }
+  render {
+    layout {
+      section {
+        content {
+          map-card {
+            aspect-ratio (3:4)
+            // 15 ~ 17
+            
+            zoom (16)
+            title-area {
+              slot2 {
+
+              single-line {
+
+                spacer
+
+              }
+
+              } 
+              // slot2 {
+              //   single-line {
+              //     text {
+              //       value ("Arrives in #{value(rideShare.pickupETA)}")
+              //     }
+              //   }
+              // }
+            } 
+            markers {
+              marker {
+                geo (location)
+                icon ("/images/icons/green-map-marker.png")
+                width (15)
+                height (20)
+                anchor-x (5)
+                anchor-y (15)
+                rotation (0)
+              }
+            //   marker {
+            //     geo (rideShare.destinationPoint)
+            //     icon ("/images/icons/red-map-marker.png")
+            //     width (20)
+            //     height (20)
+            //     anchor-x (5)
+            //     anchor-y (15)
+            //     rotation (0)
+            //   }
+            // }
+            }
+          }
+        }
+      }
+    }
+  }
+}

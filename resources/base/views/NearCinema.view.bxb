@@ -1,0 +1,50 @@
+result-view{
+  match : Location (locate){
+    min (Required) max (Many)
+  }
+  render{
+    layout{
+      section{
+        content{
+          map-card{
+            aspect-ratio (1:1)
+            zoom(20)
+            title-area{
+              slot1{
+                text{
+                  value ("영화관")
+                  style(Title_L)
+                }        
+              }
+            }
+          markers{
+            for-each (locate){
+              as(item){
+                 marker {
+                  geo (item)
+                  icon ("/images/icons/Lotte_marker.png")
+                  width (35)
+                  height (35)
+                  anchor-x (5)
+                  anchor-y (15)
+                  rotation (0)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+      
+     
+    
+   layout-macro (cinemaLoca){
+        param (map){
+          expression (locate)
+        }
+        
+      }
+    }
+  }
+}

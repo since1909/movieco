@@ -1,0 +1,4 @@
+action (ShowMap) {
+  type (Search)
+  output (Location)
+}

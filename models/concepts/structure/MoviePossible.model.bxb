@@ -1,0 +1,15 @@
+structure (MoviePossible) {
+  description (__DESCRIPTION__)
+  property (location) {
+    type (Location)
+    min (Optional) max (One)
+  }
+  property (theaterList) {
+    type (TheaterList)
+    min (Optional) max (One)
+  }
+  property (movieDetail) {
+    type (MovieDetail)
+    min (Optional) max (One)
+  }
+}

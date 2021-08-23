@@ -1,0 +1,5 @@
+train (t-dstmh292w31944utrjatqmsso) {
+  utterance ("[g:MovieDetail] (천문)[v:Movie] (어때)[v:Action:어때]")
+  plan (Y2BhkCvISaxML8ovzUvRy80vy0x1ztfzBdEuqSWJmTkMCljkgzPyy8FqPPPS8hkksahwTC7JzM9jkMBlOAMzAyMDE5BkANIgCAEgPlgUAA==)
+  last-modified (1579341676785)
+}

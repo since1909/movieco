@@ -1,0 +1,19 @@
+structure (MovieInfo) {
+  description (__DESCRIPTION__)
+  property (movie) {
+    type (Movie)
+    min (Required) max (One)
+  }
+  property (poster) {
+    type (PosterURL)
+    min (Optional) max (One)
+  }
+  property (preview) {
+    type (PreviewURL)
+    min (Optional) max (One)
+  }
+  property (date) {
+    type (ReleaseDate)
+    min (Optional) max (One)
+  }
+}

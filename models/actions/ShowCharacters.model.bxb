@@ -1,0 +1,14 @@
+action (ShowCharacters) {
+  description (백두산 등장인물 알려줘 발화에 동작)
+  collect {
+    input (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+    input (characters){
+      type (Characters)
+      min (Required) max (One)
+    }
+  }
+  output (MovieDetail)
+}

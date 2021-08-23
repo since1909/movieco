@@ -1,0 +1,10 @@
+action (ShowBoxOffice) {
+  description (__DESCRIPTION__)
+  collect {
+    input (action) {
+      type (Action)
+      min (Optional) max (One)
+    }
+  }
+  output (BoxOffice)
+}

@@ -1,0 +1,41 @@
+result-view{
+  match : MovieDetail (movie){
+    min (Required) max (One)
+  }
+  render{
+      layout-macro (movie-poster){
+        param (poster){
+          expression (movie)
+        }
+        
+      }
+      
+    //////////////////////
+      // list-of (movie.actors){
+      //   has-details (true)
+      //   where-each (item){
+      //     cell-card{
+      //       slot1{
+      //         image{
+      //           url ("#{value(item.link)}")
+      //           shape (Circle)
+      //         }
+
+      //       }
+      //       slot2{
+      //         content{
+      //           order (PrimarySecondary)
+      //           primary ("#{value(item.name)}")
+      //           secondary("actor")
+      //         }
+      //   }
+      //     }
+          
+      //     }
+      //   }
+      //////////////////
+     
+  
+    
+  }
+}

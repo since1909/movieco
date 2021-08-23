@@ -1,0 +1,20 @@
+structure (MovieList) {
+  description ("상영정보")
+  property (movieNm) {
+    type (Movie)
+    min (Optional) max (One)
+  }
+  property (movieRoom){
+    type (MovieRoom)   
+    min (Optional) max (One)
+  }
+  property (movieTime){
+    type (MovieTime)
+    min (Optional) max (One)
+  }
+  property (posterUrl){
+    type (PosterURL)
+    min (Optional) max (One)
+  }
+}
+

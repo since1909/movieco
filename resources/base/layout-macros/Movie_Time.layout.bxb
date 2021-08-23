@@ -1,0 +1,83 @@
+layout-macro-def (cinemaInfo) {
+  params{
+    param (cinema){
+      type (InfoByTime)
+      min (Required) max (One)
+    }
+  }
+  content{
+      section{
+        content{
+           title-area{
+            slot1{
+            text{
+            style (Title_L)
+            value ("상영정보")
+                }
+              }
+          }
+          compound-card{
+            content{
+              image-card{
+                aspect-ratio (4:3)
+                image-url ("/images/icons/CGV_logo.png")
+                title-area{
+                  halign (End)
+                  slot1{
+                    text{
+                      value("moviename")
+                      style(Title_M)
+                    }
+                  }
+                }
+              }
+              hbox{
+                content{
+                  vbox{
+                    content{
+                      single-line{
+                        text{
+                          value("runtime")
+                        }
+                      }
+                    }
+                  }
+                  divider
+                  vbox{
+                    content{
+                      single-line{
+                        text{
+                          value("runtime2")
+                        }
+                      }
+                    }
+                  }
+                  divider
+                  vbox{
+                    content{
+                      single-line{
+                        text{
+                          value("runtime3")
+                        }
+                      }
+                    }
+                  }
+                  divider
+                  vbox{
+                    content{
+                      single-line{
+                        text{
+                          value("runtime4")
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }

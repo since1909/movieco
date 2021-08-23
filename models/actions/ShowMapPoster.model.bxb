@@ -1,0 +1,10 @@
+action (ShowMapPoster) {
+  description (__DESCRIPTION__)
+  collect {
+    input (ll) {
+      type (Movie)
+      min (Optional) max (One)
+    }
+  }
+  output (ActorName)
+}

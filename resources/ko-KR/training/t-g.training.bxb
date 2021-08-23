@@ -1,0 +1,5 @@
+train (t-grtdk4dnbvvzb5htw5p6caglq) {
+  utterance ("[g:MovieInfo] (겨울왕국)[v:Movie] 영화관 위치 (찾아줘)[v:Action:찾아줘]")
+  plan (Y2BhkCnISaxML8ovzUvRy80vy0x1ztfzBdGeeWn5DApYZIMz8ssRKiSxqHBMLsnMz2OQwGU0AzMDIwMTkGQA0iAIASA+WBQA)
+  last-modified (1579286331695)
+}

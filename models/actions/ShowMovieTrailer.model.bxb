@@ -1,0 +1,15 @@
+action (ShowMovieTrailer) {
+  description (겨울왕국 예고편보여줘 발화에 동작)
+   type(Search)
+  collect {
+    input (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+    input (actionTrailer){
+      type (ActionTrailer)
+      min (Required) max (One)
+    }
+  }
+  output (MovieDetail)
+}

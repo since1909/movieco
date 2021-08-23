@@ -1,0 +1,31 @@
+structure (Cinema) {
+  description ("영화관")
+  property (cinemaName) {
+    type (CinemaName)
+    min (Optional) max (One)
+  }
+  property (cinemaLoca){
+    type (Location)
+    min (Optional) max (One)
+  }
+  property (movieList){
+    type (MovieList)
+    min (Optional) max(One)
+  }
+  property (cinemaType){
+    type(CinemaType)
+    min (Optional) max (One)
+  }
+  property (distance) {
+    type (Distance)
+    min (Optional) max (One)
+  }
+  property (icon) {
+    type (Icon)
+    min (Optional) max (One)
+  }
+  property (logo) {
+    type (Logo)
+    min (Optional) max (One)
+  }
+}

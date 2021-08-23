@@ -1,0 +1,29 @@
+action (ShowMovieByTime) {
+  description (__DESCRIPTION__)
+  collect {
+      input (location) {
+        type (Location)
+        min (Optional) max (One)
+
+        default-init{
+          if($user.currentLocation.$exists){
+            intent{
+              goal: Location
+              value-set: geo.CurrentLocation { $expr ($user.currentLocation) }
+            }
+          }
+        }
+      }
+      input(timeFrom){
+          type(TimeFrom)
+          min(Required) max (One)
+      }
+      
+      input(timeTo){
+          type(TimeTo)
+          min(Optional) max (One)
+      }
+  }  
+  output (InfoByTime)      
+}
+

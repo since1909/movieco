@@ -1,0 +1,46 @@
+capsule {
+  id (mvco.movieco)
+  
+  version (0.1.0)
+  format (3)
+  targets {
+    target (bixby-mobile-ko-KR)
+  }
+  store-sections{
+    section (MoviesAndTV)
+  }
+  store-countries{
+    only{
+      allow(KR)
+    }
+  }
+   runtime-flags {
+    use-input-views-for-selection-list-detail
+    concepts-inherit-super-type-features
+    modern-default-view-behavior
+    modern-prompt-rejection
+    support-halt-effect-in-computed-inputs
+    no-filtering-with-validation
+  }
+  capsule-imports{
+    import(viv.core){
+      as(core)
+    }
+    import (viv.geo){
+      as(geo)
+      version(9.24.14)
+    }
+    import (viv.contact){
+      as(contact)
+      version(2.5158.2)
+    }
+    import (viv.time) { 
+      as (time) 
+      version(3.1.23)
+    }
+  }
+
+  permissions{ 
+    user-profile-access
+  }
+}

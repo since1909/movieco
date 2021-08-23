@@ -1,0 +1,15 @@
+action (ShowMovieInfo) {
+  description (겨울왕국 어때? 발화에 동작)
+  type(Search)
+  collect {
+    input (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+    input (action){
+      type (Action)
+      min (Required) max (One)
+    }
+  }
+  output (MovieDetail)
+}

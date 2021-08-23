@@ -1,0 +1,5 @@
+train (t-6wqdzzmzewpkr4ho8fv6ro54n) {
+  utterance ("[g:InfoByTime] (지금)[v:TimeFrom] 볼 수 있는 영화관 알려줘")
+  plan (Y2BmEM8tS87Xy80vy0wF0p55aflOlSGZuakMMigSwRn55b4gNlRWFEUWJORWlJ/LwMTACMQMQJKRAQSYIBgA)
+  last-modified (1579572663345)
+}

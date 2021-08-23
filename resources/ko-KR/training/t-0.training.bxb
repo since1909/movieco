@@ -1,0 +1,5 @@
+train (t-0aidymbjli99mpkf6pkxf9atp) {
+  utterance ("[g:MovieDetail] (광해)[v:Movie] (등장인물)[v:Characters:등장인물] 알려줘")
+  plan (Y2BhkMgtS87Xy80vy0wF0r4g2iW1JDEzh0EaRSY4I7/cOSOxKDG5JLWomEEcRRJJQgjTPAZmBkYGJiDJAKRBEAJAfLAoAA==)
+  last-modified (1579440192932)
+}

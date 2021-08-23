@@ -1,0 +1,5 @@
+train (t-9pt15xgoej5qzyjqd9d7ss6e3) {
+  utterance ("[g:ShowMovieTrailer] (닥터 두리틀)[v:Movie] (예고편)[v:ActionTrailer:예고편] 보여줘")
+  plan (Y2BhkMgtS87Xy80vy0wF0r4g2iW1JDEzh0EWRSY4I78cLBtSBJRMLWKQQpF2TC7JzM+DyQlhGsrAzMDIwAQkGYA0CEIAXBQA)
+  last-modified (1579478845689)
+}

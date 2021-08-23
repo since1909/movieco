@@ -1,0 +1,12 @@
+
+structure (Actors) {
+  property (name) {
+    type (ActorName)
+    min (Required) max (One)
+  }
+
+  property (link) {
+    type (ActorProfile)
+    min (Required) max (One)
+  }
+}

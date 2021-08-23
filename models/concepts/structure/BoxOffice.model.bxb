@@ -1,0 +1,52 @@
+structure (BoxOffice) {
+  description (__DESCRIPTION__)
+  property (director) {
+    type (Director)
+    min (Optional) max (One)
+  }
+  property (movieCd) {
+    type (MovieCode)
+    min (Optional) max (One)
+  }
+  property (movieNm) {
+    type (Movie)
+    min (Optional) max (One)
+  }
+  property (openDt) {
+    type (ReleaseDate)
+    min (Optional) max (One)
+  }
+  property (genreAlt) {
+    type (MovieGenre)
+    min (Optional) max (One)
+  }
+  property (actors){
+    type (Actors)
+    min (Optional) max(Many)
+  }
+  property (poster){
+    type (PosterURL)
+    min (Optional) max(One)
+  }
+  property (preview){
+    type (PreviewURL)
+    min (Optional) max (One)
+  }
+  property (rate){
+    type (Rate)
+    min (Optional) max (One)
+  }
+  property (plot){
+    type (MoviePlot)
+    min (Optional) max (One)
+  }
+  property (runtime){
+    type (Runtime)
+    min (Optional) max (One)
+  }
+  property (audiAcc){
+    type (AudiAcc)
+    min (Required) max (One)
+  }
+}
+

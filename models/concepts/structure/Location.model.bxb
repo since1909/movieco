@@ -1,0 +1,3 @@
+structure (Location) {
+  role-of (geo.GeoPoint)
+}

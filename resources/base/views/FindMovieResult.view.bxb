@@ -1,0 +1,109 @@
+result-view{
+  match : Movie(this){
+		min (Required) max (Many){
+			
+		}
+	}
+	
+	render {
+		// if (size(this) == 1) {
+		// 	// 레이아웃 설정.
+		// 	// param에는 기존의 layout을 만든 형태에서 
+		// 	//layout-macro(레이아웃 이름)
+		// 	// param(전달할 변수이름(레이아웃 안의 이름을 그대로)){
+		// 	//			expression(진짜 전달할 값)
+		// 	//}
+		// 	layout-macro (MOVIE_SIMPLE) {
+		// 		param (movie) {
+		// 			expression (this)
+		// 		}
+		// 	}
+		// } else-if (size(this) > 1) {
+		// 	list-of (this){
+		// 		where-each (this){
+		// 			layout-macro (MOVIE_SIMPLE) {
+		// 				param (movie) {
+		// 					expression (this)
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+			
+			
+			// list-of (results) {
+			// 	navigation-mode{ 
+			// 		if ($handsFree) {
+			// 			read-one {
+			// 				with-navigation-conversation-drivers
+			// 				list-summary {
+			// 					template ("#{event(results, 'Result')}")
+			// 				}
+			// 				page-content {
+			// 					item-selection-question {
+			// 						template-macro (HANDS_FREE_MOVIE_ITEM_SELECTION_QUESTION)
+			// 					}
+			// 					overflow-statement {
+			// 						template-macro (HANDS_FREE_MOVIE_OVERFLOW_STATEMENT)
+			// 					}
+			// 					overflow-question {
+			// 						template-macro (HANDS_FREE_MOVIE_OVERFLOW_QUESTION)
+			// 					}
+			// 					underflow-statement {
+			// 						template-macro (HANDS_FREE_MOVIE_UNDERFLOW_STATEMENT)
+			// 					}
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// 	// 세부사항 보기를 표시하는지 판별
+			// 	has-details (true)
+			// 	// 특정결과를 강조하고 싶을때 highlights 사용.
+			// 	highlights {
+			// 		// 목록 내에서 강조 표시할 항목과 이 항목에 대해 사용자에게 표시할 정보를 결정한다.
+			// 		select (pick) {
+			// 			// 대화 상자는 질문을 하거나 상태를 제공하거나 결과를 출력할 때 label 사용.
+			// 			label {
+			// 				template-macro (MOVIE_HIGHLIGHT_LABEL)
+			// 			}
+						
+			// 			layout-macro (MOVIE_HIGHLIGHT) {
+			// 				param (movie) {
+			// 					expression (pick)
+			// 				}
+			// 			}
+			// 			summary {
+			// 				template-macro (HANDS_FREE_MOVIE_HIGHLIGHT_SUMMARY) {
+			// 					param (movie) {
+			// 						expression (pick)
+			// 					}
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// 	// 나머지 영화들에 대한 출력
+			// 	where-each (result) {
+			// 		if ($handsFree) {
+			// 			layout-macro (MOVIE_HIGHLIGHT) {
+			// 				param (movie) {
+			// 					expression (result)
+			// 				}
+			// 			}
+			// 		} else {
+			// 			layout-macro (MOVIE_SUMMARY) {
+			// 				param (movie) {
+			// 					expression (result)
+			// 				}
+			// 			}
+			// 		}
+			// 		spoken-summary {
+			// 			template-macro (HANDS_FREE_MOVIE_NORMAL_SUMMARY) {
+			// 				param (movie) {
+			// 					expression (result)
+			// 				}
+			// 			}
+			// 		}
+				// }
+			// }
+		
+	}
+}

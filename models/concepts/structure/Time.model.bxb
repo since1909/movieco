@@ -1,0 +1,11 @@
+structure (Time) {
+  description (__DESCRIPTION__)
+  property (time) {
+    type (TimeText)
+    min (Required) max (One)
+  }
+  property (date){
+    type (Date)
+    min (Required) max (One)
+  }
+}

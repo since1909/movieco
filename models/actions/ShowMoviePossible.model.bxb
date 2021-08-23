@@ -1,0 +1,23 @@
+action (ShowMoviePossible) {
+  description (__DESCRIPTION__)
+  collect {
+    input (location) {
+      type (Location)
+      min (Optional) max (One)
+
+      default-init{
+        if($user.currentLocation.$exists){
+          intent{
+            goal: Location
+            value-set: geo.CurrentLocation { $expr ($user.currentLocation) }
+          }
+        }
+      }
+    }
+    input (movie) {
+      type (Movie)
+      min (Required) max (One)
+    }
+  }
+  output (__OUTPUT__)
+}

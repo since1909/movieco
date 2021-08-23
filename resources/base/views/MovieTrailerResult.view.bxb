@@ -1,0 +1,21 @@
+result-view{
+  match : MovieDetail(this){
+    from-output : ShowMovieTrailer(trailerAction)
+  }
+
+  render{
+    if (size(this) == 1) {
+			// 레이아웃 설정.
+			// param에는 기존의 layout을 만든 형태에서 
+			//layout-macro(레이아웃 이름)
+			// param(전달할 변수이름(레이아웃 안의 이름을 그대로)){
+			//			expression(진짜 전달할 값)
+			//}
+			layout-macro (MOVIE_TRAILER) {
+				param (movie) {
+					expression (this)
+				}
+			}
+    }
+  }
+}

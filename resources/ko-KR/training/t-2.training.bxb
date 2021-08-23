@@ -1,0 +1,5 @@
+train (t-2c760bn32q8vobwno5c9mhcay) {
+  utterance ("[g:MovieDetail] (천문)[v:Movie] (평점)[v:Action:어때] 보여줘")
+  plan (Y2BhkMgtS87Xy80vy0wF0r4g2iW1JDEzh0EKRSY4I78cLOuZl5bPIIwi55hckpmfxyCEaRQDMwMjAxOQZADSIAgBID5YFAA=)
+  last-modified (1579478579238)
+}

@@ -1,0 +1,44 @@
+result-view{
+  match : InfoByTime (timeinfo){
+    min (Required) max (One)
+  }
+  render{
+    layout{
+      section{
+        content{
+          
+          map-card{
+            aspect-ratio (1:1)
+            title-area{
+              slot1{
+                text{
+                  value ("영화관")
+                  style(Title_L)
+                }
+                  
+            }
+          }
+          markers{
+            marker{
+              geo (timeinfo.location)
+              icon("/images/icons/green-map-marker.png")
+              width (10)
+              height (20)
+              anchor-x (5)
+              anchor-y (15)
+              rotation (0)
+            }
+          }
+        }
+      }
+    } 
+    
+   layout-macro (cinemaInfo){
+        param (cinema){
+          expression (timeinfo)
+        }
+        
+      }
+    }
+  }
+}

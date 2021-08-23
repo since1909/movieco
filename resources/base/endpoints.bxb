@@ -1,0 +1,35 @@
+endpoints {
+  action-endpoints {
+      
+    action-endpoint (ShowBoxOffice) {
+      accepted-inputs (action)
+      local-endpoint (ShowBoxOffice.js)
+    }
+    action-endpoint (ShowMovieInfo) {
+      accepted-inputs (movie, action)
+      local-endpoint (ShowMovieInfo.js)
+    }
+    action-endpoint (GetLocation) {
+      accepted-inputs (location)
+      local-endpoint (ShowNearCinema.js)
+    }
+    action-endpoint (ShowMovieTrailer) {
+      accepted-inputs (movie, actionTrailer)
+      local-endpoint (ShowMovieTrailer.js)
+    }
+    action-endpoint (ShowCharacters) {
+      accepted-inputs (movie, characters)
+      local-endpoint (ShowCharacters.js)
+    }
+    action-endpoint (ShowMovieByTime) {
+      accepted-inputs (name)
+      local-endpoint (ShowMovieByTime.js)
+    }
+    // action-endpoint (__ACTION_NAME__) {
+    //   accepted-inputs (__LIST_OF_ACTION_INPUTS__)
+    //   remote-endpoint (__ENDPOINT_URL__) {
+    //     method (__HTTP_METHOD_USED__)
+    //   }
+    // }
+  }
+}

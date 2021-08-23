@@ -1,0 +1,7 @@
+enum (MovieType) {
+  description (__DESCRIPTION__)
+  symbol (2D)
+  symbol (3D)
+  symbol (IMAX)
+  symbol (4D)
+}

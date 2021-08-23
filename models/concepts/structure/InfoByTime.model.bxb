@@ -1,0 +1,15 @@
+structure (InfoByTime) {
+  description (__DESCRIPTION__)
+  property (movie){
+    type (MovieDetail)
+    min (Required) max(One)
+  }
+  property (location) {
+    type (Location)
+    min (Optional) max (One)
+  }
+  property (cinema) {
+    type (Cinema)
+    min (Optional) max (Many)
+  }
+}

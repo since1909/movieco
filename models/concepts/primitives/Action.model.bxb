@@ -1,0 +1,6 @@
+enum (Action) {
+  symbol ("예고편")
+  symbol ("찾아줘")
+  symbol ("등장인물")
+  symbol ("어때")
+}

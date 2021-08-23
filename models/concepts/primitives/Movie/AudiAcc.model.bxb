@@ -1,0 +1,3 @@
+integer (AudiAcc) {
+  description (__DESCRIPTION__)
+}

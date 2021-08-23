@@ -1,0 +1,38 @@
+layout-macro-def (cinemaLoca) {
+  params{
+    param (map){
+      type (Location)
+      min (Required) max (One)
+    }
+  }
+  content{
+    section{
+      content{
+      
+         thumbnail-card{
+      title-area{
+        halign (Start)
+        slot1{
+          text{
+            style (Title_M)
+            value ("영화관 이름")
+          }
+        }
+        slot2{
+          single-line{
+            text{
+              value ("거리")
+              style (Detail_M)
+            }
+          }
+        }
+      }
+      image-url ("/images/icons/CGV_logo.png")
+      image-position (Start)
+    }
+      }
+     
+    }
+    
+    }
+}

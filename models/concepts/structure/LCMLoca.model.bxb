@@ -1,0 +1,12 @@
+structure (LCMLoca) {
+  description (롯데시네마, cgv, 메가박스 거리 위치 상영사)
+  property (location) {
+    type (Location)
+    min (Optional) max (One)
+  }
+  property (cinema) {
+    type (Cinema)
+    min (Optional) max (Many)
+  }
+  
+}

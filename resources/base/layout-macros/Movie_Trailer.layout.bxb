@@ -1,0 +1,34 @@
+layout-macro-def (MOVIE_TRAILER){
+  params{
+    param (movie) { 
+      type (MovieDetail)
+      min (Required) max (One)
+    }
+  }
+
+  content{
+    layout {
+      section{
+        content{
+            cell-card {
+            slot2 {
+              content {
+                order (PrimarySecondary)
+                primary ("#{value(movie.movieNm)}")
+                secondary ("#{value(movie.director)}")
+              }
+            }
+          }
+        }
+      }
+      section {
+        content {
+          //video compound 불가능...
+          video {
+            url ("#{value(movie.preview)}")
+          }
+        }
+      }
+    }
+  }
+}

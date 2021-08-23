@@ -1,0 +1,72 @@
+layout-macro-def (MOVIE_CHARACTRS){
+  params{
+    param (movie) { 
+      type (MovieDetail)
+      min (Required) max (One)
+    }
+  }
+  content{
+    layout{
+      section{
+        content{
+          thumbnail-card{
+            title-area{
+              halign (Start)
+              slot1 {
+                text {
+                  style (Title_M)
+                  value ("#{value(movie.movieNm)}")
+                }
+              }
+              slot2 {
+                single-line {
+                  text {
+                    value ("감독 #{value(movie.director)}")
+                    style (Title_S)
+                  }
+                }
+              }  
+          }
+          image-url {
+            template ("[#{value(movie.poster)}]")
+          }
+        }
+      }
+    }
+    section{
+      content{
+        title-area{
+          halign (Start)
+          slot1{
+            text{
+              style(Title_M)
+              value("배우")
+            }
+          }
+        }
+      }
+    }
+    section{
+      content{
+        for-each (movie.actors){ as(item){
+          image-card{
+            aspect-ratio(3:4)
+            column-size (3)
+            title-area{
+              halign(Center)
+              slot1{
+                text{
+                  value("#{value(item.name)}")
+                  style (Title_S)
+                }
+              }
+            }
+            image-url("#{value(item.link)}")
+          }
+        }
+        }
+      }
+    }
+  }
+  }
+}

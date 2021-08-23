@@ -1,0 +1,4 @@
+enum (Characters) {
+  description (백두산 등장인물 알려줘 발화에 사용)
+  symbol ("등장인물")
+}

@@ -1,0 +1,41 @@
+layout-macro-def (MOVIE_SIMPLE) {
+  params {
+    param (movie) { 
+      type (MovieDetail)
+      min (Required) max (One)
+    }
+  }
+  content {
+    
+    thumbnail-card {
+      
+      // 이미지 url
+      image-url ("[#{value(movie.poster)}]")
+      // 이미지 비율
+      image-aspect-ratio (3:4)
+      // 이미지 채우는 형태
+      image-object-fit (Contain)
+      // 이미지 시작위치
+      image-position (Start)
+      // 타이틀 적을 구역
+      title-area {
+        // 제목
+        slot1 {
+          text {
+            value ("#{value(movie.movieNm)}")
+            style (Title_M)
+          }
+        }
+        // 년도
+        slot2 {
+          single-line {
+            text {
+              value ("#{value(movie.openDt)}")
+              style (Detail_L_Soft)
+            }
+          }
+        }
+      }
+    }
+  }
+}

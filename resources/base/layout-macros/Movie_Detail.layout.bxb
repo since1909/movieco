@@ -1,0 +1,147 @@
+layout-macro-def (movie-poster) {
+  params{
+    param (poster){
+      type (MovieDetail)
+      min (Required) max (One)
+    }
+  }
+  content{
+    layout{
+      section{
+        content{
+          image{
+            url("[#{value(poster.poster)}]")
+            aspect-ratio (3:4)
+            object-fit (Contain)
+            lightbox-enabled (true)
+          }
+          paragraph{
+            value ("#{value(poster.movieNm)}")
+            style (Title_M)
+          }
+          spacer
+    hbox{
+         content {
+        vbox{
+          grow(1)
+          halign (Center)
+          content{
+            text{
+              value ("Opentime")
+              style (Detail_L_Soft)
+            }
+            text{
+              value ("#{value(poster.openDt)}")
+              style (Title_S)
+            }
+          }
+        }
+        vbox{
+          grow(1)
+          halign (Center)
+          content{
+            text{
+              value ("Rate")
+              style (Detail_L_Soft)
+            }
+            if(exists(poster.rate)){
+              text{
+                value("★ [#{value(poster.rate)}] ")
+                style(Title_S)              
+                }
+            }
+          }
+        }
+         }
+    }
+    spacer
+    hbox{
+         content {
+        vbox{
+          grow(1)
+          halign (Center)
+          content{
+            text{
+              value ("Genre")
+              style (Detail_L_Soft)
+            }
+            text{
+              value ("#{value(poster.genreAlt)}")
+              style (Title_S)
+            }
+          }
+        }
+        vbox{
+          grow(1)
+          halign (Center)
+          content{
+            text{
+              value ("Runtime")
+              style (Detail_L_Soft)
+            }
+            if(exists(poster.runtime)){
+              text{
+                value("[#{value(poster.runtime)}] 분")
+                style(Title_S)              
+                }
+            }
+          }
+        }
+       
+      }
+    }
+        }}
+        section{
+          content{
+            for-each (poster.actors){ as(item){
+          image-card{
+            aspect-ratio(3:4)
+            column-size (Three)
+            title-area{
+              halign(Center)
+              slot1{
+                text{
+                  value("#{value(item.name)}")
+                  style (Title_S)
+                }
+              }
+            }
+            image-url("#{value(item.link)}")
+          }
+        }
+          }
+        }
+        }
+                
+              
+    
+    //////
+        section{
+          title ("Description")
+          content{
+        paragraph {
+          value ("#{value(poster.plot)}")
+          style (Detail_L)
+        }
+        attribution-link {
+          label {
+            template ("Open Lottecinema to book")
+          }
+          url {
+            template ("https://www.lottecinema.co.kr/")
+          }
+        }
+    }
+        }
+      section{
+        content{
+          video {
+            url ("#{value(poster.preview)}")
+          }
+        }
+      }
+    }    
+      }
+    }
+    
+  
